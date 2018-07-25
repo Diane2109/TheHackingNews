@@ -1,0 +1,901 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20180725171830)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20180725171830)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20180725171830)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180725171830_create_users.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar, "lastname" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180725171830_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180725171830"]]
+  ↳ bin/rails:9
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateLinks (20180725171911)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateLinks (20180725171911)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180725171911_create_links.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "links" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180725171911_create_links.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180725171911"]]
+  ↳ bin/rails:9
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateComments (20180725172106)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "parent_id" integer, "content" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180725172106_create_comments.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_parent_id" ON "comments" ("parent_id")[0m
+  ↳ db/migrate/20180725172106_create_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180725172106"]]
+  ↳ bin/rails:9
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-07-25 17:42:16.026909"], ["updated_at", "2018-07-25 17:42:16.026909"]]
+  ↳ bin/rails:9
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Lakin, Bosco and Adams"], ["lastname", "Ryan-Walsh"], ["email", "georgetta@white.io"], ["created_at", "2018-07-25 17:47:36.533504"], ["updated_at", "2018-07-25 17:47:36.533504"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Bosco LLC"], ["lastname", "Kilback, O'Connell and Mohr"], ["email", "trishkeebler@dooleydonnelly.net"], ["created_at", "2018-07-25 17:47:36.544727"], ["updated_at", "2018-07-25 17:47:36.544727"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Kassulke, Kulas and Willms"], ["lastname", "Stehr Inc"], ["email", "lance@kuhnlittel.biz"], ["created_at", "2018-07-25 17:47:36.551969"], ["updated_at", "2018-07-25 17:47:36.551969"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (11.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Borer, Harber and Huel"], ["lastname", "Walter, Kilback and Mraz"], ["email", "ashantischmidt@kemmer.net"], ["created_at", "2018-07-25 17:47:36.566584"], ["updated_at", "2018-07-25 17:47:36.566584"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Ondricka-Reynolds"], ["lastname", "Feeney Group"], ["email", "dalton@bruen.co"], ["created_at", "2018-07-25 17:47:36.579547"], ["updated_at", "2018-07-25 17:47:36.579547"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Bashirian, VonRueden and Kertzmann"], ["lastname", "Langworth and Sons"], ["email", "jacklyndietrich@zboncak.io"], ["created_at", "2018-07-25 17:47:36.594675"], ["updated_at", "2018-07-25 17:47:36.594675"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Ferry, Dibbert and Lind"], ["lastname", "Crooks-Dickinson"], ["email", "chiquita@kertzmannbailey.biz"], ["created_at", "2018-07-25 17:47:36.608175"], ["updated_at", "2018-07-25 17:47:36.608175"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Hackett, Kiehn and Balistreri"], ["lastname", "Barton-Orn"], ["email", "benniethiel@wisozk.net"], ["created_at", "2018-07-25 17:47:36.623133"], ["updated_at", "2018-07-25 17:47:36.623133"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Schiller LLC"], ["lastname", "Hackett and Sons"], ["email", "luba@kshlerinmacejkovic.com"], ["created_at", "2018-07-25 17:47:36.630510"], ["updated_at", "2018-07-25 17:47:36.630510"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Larson-Hackett"], ["lastname", "Emmerich-Pacocha"], ["email", "loretta@cartwrightgreenholt.org"], ["created_at", "2018-07-25 17:47:36.636920"], ["updated_at", "2018-07-25 17:47:36.636920"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Halvorson, Runolfsdottir and Dickinson"], ["lastname", "Deckow-Gislason"], ["email", "ezequielwyman@abernathy.io"], ["created_at", "2018-07-25 17:59:23.765670"], ["updated_at", "2018-07-25 17:59:23.765670"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "O'Connell, Reichert and Kirlin"], ["lastname", "Carter Group"], ["email", "jamitorp@parkerzboncak.biz"], ["created_at", "2018-07-25 17:59:23.778653"], ["updated_at", "2018-07-25 17:59:23.778653"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Smitham, Kuphal and Davis"], ["lastname", "Barton Inc"], ["email", "brucemonahan@effertz.net"], ["created_at", "2018-07-25 17:59:23.785855"], ["updated_at", "2018-07-25 17:59:23.785855"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Goodwin-Graham"], ["lastname", "Bradtke, Rath and Haley"], ["email", "aikeeling@dach.io"], ["created_at", "2018-07-25 17:59:23.791040"], ["updated_at", "2018-07-25 17:59:23.791040"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Jast and Sons"], ["lastname", "Prosacco Group"], ["email", "wernergoldner@jacobiabshire.co"], ["created_at", "2018-07-25 17:59:23.796126"], ["updated_at", "2018-07-25 17:59:23.796126"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Rodriguez, Gislason and Hahn"], ["lastname", "Bauch, Kuvalis and Yundt"], ["email", "jamee@abbott.biz"], ["created_at", "2018-07-25 17:59:23.801137"], ["updated_at", "2018-07-25 17:59:23.801137"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Ortiz-Kohler"], ["lastname", "Raynor, Fahey and Haley"], ["email", "roygerhold@schimmel.name"], ["created_at", "2018-07-25 17:59:23.806390"], ["updated_at", "2018-07-25 17:59:23.806390"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (9.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Pfeffer and Sons"], ["lastname", "Baumbach Inc"], ["email", "martharitchie@walter.net"], ["created_at", "2018-07-25 17:59:23.818244"], ["updated_at", "2018-07-25 17:59:23.818244"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Kozey-Gerhold"], ["lastname", "Conroy-Legros"], ["email", "cordell@champlin.io"], ["created_at", "2018-07-25 17:59:23.830655"], ["updated_at", "2018-07-25 17:59:23.830655"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Satterfield-Mertz"], ["lastname", "Harris-Beahan"], ["email", "blythe@harris.name"], ["created_at", "2018-07-25 17:59:23.842573"], ["updated_at", "2018-07-25 17:59:23.842573"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateComments (20180725172106)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "comments"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20180725172106"]]
+  ↳ bin/rails:9
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateComments (20180725172106)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180725172106_create_comments.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "parent_id" integer, "content" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180725172106_create_comments.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_parent_id" ON "comments" ("parent_id")[0m
+  ↳ db/migrate/20180725172106_create_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180725172106"]]
+  ↳ bin/rails:9
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mLink Load (0.2ms)[0m  [1m[34mSELECT  "links".* FROM "links" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mLink Load (1.2ms)[0m  [1m[34mSELECT  "links".* FROM "links" WHERE (google) LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateComments (20180725172106)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[35mDROP TABLE "comments"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20180725172106"]]
+  ↳ bin/rails:9
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateComments (20180725172106)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180725172106_create_comments.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "link_id" integer, "parent_id" integer, "content" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180725172106_create_comments.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_link_id" ON "comments" ("link_id")[0m
+  ↳ db/migrate/20180725172106_create_comments.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_parent_id" ON "comments" ("parent_id")[0m
+  ↳ db/migrate/20180725172106_create_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180725172106"]]
+  ↳ bin/rails:9
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (15.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateComments (20180725172106)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE "comments"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20180725172106"]]
+  ↳ bin/rails:9
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (14.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20180725171830)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar, "lastname" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180725171830_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180725171830"]]
+  ↳ bin/rails:9
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateLinks (20180725171911)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "links" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "url" varchar, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180725171911_create_links.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_links_on_user_id" ON "links" ("user_id")[0m
+  ↳ db/migrate/20180725171911_create_links.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180725171911"]]
+  ↳ bin/rails:9
+  [1m[35m (17.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateComments (20180725172106)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "link_id" integer, "parent_id" integer, "content" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180725172106_create_comments.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_link_id" ON "comments" ("link_id")[0m
+  ↳ db/migrate/20180725172106_create_comments.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_parent_id" ON "comments" ("parent_id")[0m
+  ↳ db/migrate/20180725172106_create_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180725172106"]]
+  ↳ bin/rails:9
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-07-25 20:57:18.241432"], ["updated_at", "2018-07-25 20:57:18.241432"]]
+  ↳ bin/rails:9
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Parker-Cummerata"], ["lastname", "Kerluke-Pouros"], ["email", "darby@harvey.io"], ["created_at", "2018-07-25 20:57:25.768752"], ["updated_at", "2018-07-25 20:57:25.768752"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Stark-Stamm"], ["lastname", "Abshire-Stracke"], ["email", "mammiegreen@schummmarquardt.net"], ["created_at", "2018-07-25 20:57:25.778256"], ["updated_at", "2018-07-25 20:57:25.778256"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Boyer Group"], ["lastname", "Altenwerth, Swift and Mertz"], ["email", "vinnie@fay.name"], ["created_at", "2018-07-25 20:57:25.784156"], ["updated_at", "2018-07-25 20:57:25.784156"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Hartmann Group"], ["lastname", "Kerluke, Hane and Romaguera"], ["email", "magda@ebert.io"], ["created_at", "2018-07-25 20:57:25.789736"], ["updated_at", "2018-07-25 20:57:25.789736"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Crist, Adams and Prosacco"], ["lastname", "Konopelski Group"], ["email", "sydney@ratke.co"], ["created_at", "2018-07-25 20:57:25.802285"], ["updated_at", "2018-07-25 20:57:25.802285"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Olson-Kuvalis"], ["lastname", "Bogan, Christiansen and Schmidt"], ["email", "delbert@kuphal.com"], ["created_at", "2018-07-25 20:57:25.814828"], ["updated_at", "2018-07-25 20:57:25.814828"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Runte, Haag and Kris"], ["lastname", "O'Reilly, Howell and Bednar"], ["email", "tammeralang@wizarobel.net"], ["created_at", "2018-07-25 20:57:25.827216"], ["updated_at", "2018-07-25 20:57:25.827216"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Bins, Ruecker and Swift"], ["lastname", "Marks, Will and Hayes"], ["email", "jc@wiegandweimann.org"], ["created_at", "2018-07-25 20:57:25.840262"], ["updated_at", "2018-07-25 20:57:25.840262"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Crona, Price and Hessel"], ["lastname", "McLaughlin Group"], ["email", "taiwaters@jenkins.name"], ["created_at", "2018-07-25 20:57:25.853875"], ["updated_at", "2018-07-25 20:57:25.853875"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Ward, Hagenes and Cremin"], ["lastname", "Olson-Spencer"], ["email", "jeanicebatz@breitenberg.biz"], ["created_at", "2018-07-25 20:57:25.859562"], ["updated_at", "2018-07-25 20:57:25.859562"]]
+  ↳ db/seeds.rb:7
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLink Create (1.0ms)[0m  [1m[32mINSERT INTO "links" ("user_id", "url", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["url", "gg.com"], ["title", "gg"], ["created_at", "2018-07-25 21:00:22.360101"], ["updated_at", "2018-07-25 21:00:22.360101"]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mLink Load (0.1ms)[0m  [1m[34mSELECT  "links".* FROM "links" ORDER BY "links"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateComments (20180725172106)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "comments"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20180725172106"]]
+  ↳ bin/rails:9
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (15.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20180725171830)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar, "lastname" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180725171830_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180725171830"]]
+  ↳ bin/rails:9
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateLinks (20180725171911)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "links" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "url" varchar, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180725171911_create_links.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_links_on_user_id" ON "links" ("user_id")[0m
+  ↳ db/migrate/20180725171911_create_links.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180725171911"]]
+  ↳ bin/rails:9
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateComments (20180725172106)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "link_id" integer, "content" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180725172106_create_comments.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_link_id" ON "comments" ("link_id")[0m
+  ↳ db/migrate/20180725172106_create_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180725172106"]]
+  ↳ bin/rails:9
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddCommentsToComments (20180725211214)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "comments" ADD "parent_id" integer[0m
+  ↳ db/migrate/20180725211214_add_comments_to_comments.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_parent_id" ON "comments" ("parent_id")[0m
+  ↳ db/migrate/20180725211214_add_comments_to_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180725211214"]]
+  ↳ bin/rails:9
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-07-25 21:13:30.281810"], ["updated_at", "2018-07-25 21:13:30.281810"]]
+  ↳ bin/rails:9
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Beahan-Davis"], ["lastname", "Sipes, Abshire and Wehner"], ["email", "gailtorphy@mueller.name"], ["created_at", "2018-07-25 21:13:36.219148"], ["updated_at", "2018-07-25 21:13:36.219148"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Roob-Towne"], ["lastname", "Armstrong-O'Reilly"], ["email", "bradleygreen@cormier.info"], ["created_at", "2018-07-25 21:13:36.231868"], ["updated_at", "2018-07-25 21:13:36.231868"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Metz-Daugherty"], ["lastname", "Heaney, Gorczany and Borer"], ["email", "jacquelin@pouros.com"], ["created_at", "2018-07-25 21:13:36.243556"], ["updated_at", "2018-07-25 21:13:36.243556"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Marquardt, Hudson and Schuppe"], ["lastname", "Walker LLC"], ["email", "inga@thompsontromp.io"], ["created_at", "2018-07-25 21:13:36.255247"], ["updated_at", "2018-07-25 21:13:36.255247"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Miller-Rice"], ["lastname", "Stanton Inc"], ["email", "gaylord@welch.co"], ["created_at", "2018-07-25 21:13:36.266881"], ["updated_at", "2018-07-25 21:13:36.266881"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Feil, Casper and Ankunding"], ["lastname", "Bradtke, Langworth and Hammes"], ["email", "karol@ullrich.name"], ["created_at", "2018-07-25 21:13:36.278504"], ["updated_at", "2018-07-25 21:13:36.278504"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Homenick Group"], ["lastname", "Bartell, McClure and Konopelski"], ["email", "winonawaters@cain.net"], ["created_at", "2018-07-25 21:13:36.283106"], ["updated_at", "2018-07-25 21:13:36.283106"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Dicki, Lesch and Rempel"], ["lastname", "Brakus Inc"], ["email", "corli@murazik.io"], ["created_at", "2018-07-25 21:13:36.287837"], ["updated_at", "2018-07-25 21:13:36.287837"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "O'Keefe Inc"], ["lastname", "Toy, Greenfelder and Frami"], ["email", "moriahlittel@schmidt.net"], ["created_at", "2018-07-25 21:13:36.292283"], ["updated_at", "2018-07-25 21:13:36.292283"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["firstname", "Kihn-Mayert"], ["lastname", "Bernier Group"], ["email", "derrick@mccullough.org"], ["created_at", "2018-07-25 21:13:36.296924"], ["updated_at", "2018-07-25 21:13:36.296924"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLink Create (0.8ms)[0m  [1m[32mINSERT INTO "links" ("user_id", "url", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["url", "gg.com"], ["created_at", "2018-07-25 21:14:31.212603"], ["updated_at", "2018-07-25 21:14:31.212603"]]
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Create (0.8ms)[0m  [1m[32mINSERT INTO "comments" ("link_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["link_id", 1], ["content", "BJ"], ["created_at", "2018-07-25 21:15:17.596596"], ["updated_at", "2018-07-25 21:15:17.596596"]]
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Create (0.9ms)[0m  [1m[32mINSERT INTO "comments" ("link_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["link_id", 1], ["content", "aha"], ["created_at", "2018-07-25 21:16:34.574697"], ["updated_at", "2018-07-25 21:16:34.574697"]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Create (0.8ms)[0m  [1m[32mINSERT INTO "comments" ("link_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["link_id", 1], ["content", "oho"], ["created_at", "2018-07-25 21:17:18.164780"], ["updated_at", "2018-07-25 21:17:18.164780"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Update (0.9ms)[0m  [1m[33mUPDATE "comments" SET "updated_at" = ?, "parent_id" = ? WHERE "comments"."id" = ?[0m  [["updated_at", "2018-07-25 21:28:37.359664"], ["parent_id", 2], ["id", 3]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
