@@ -1,7 +1,7 @@
 # README
 
 --------------------------------------------------------------------------------------
-Application Hacking News
+Application Hacking News -- ATTENTION : changement de repos : https://github.com/PerrineFo/Hacking_News
 --------------------------------------------------------------------------------------
 
 Salut moussaillon tu vas bien ? 
